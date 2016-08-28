@@ -19,11 +19,11 @@ def main():
         html = get_html_for_zip(zipcode)
         weather = parse_html(html)
 
-        print(u"Weather in {city}: {temp}, {cond}, with {hum}% humidity".format(
+        print(u"Weather in {city}: {temp}, {cond}, with {humidity}% humidity".format(
             city=weather.city,
             temp=weather.temp,
             cond=weather.cond,
-            hum=weather.humidity
+            humidity=weather.humidity
         ))
 
 
