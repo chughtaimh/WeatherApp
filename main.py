@@ -2,13 +2,10 @@
 # code and obtain the weather in their location.
 
 import requests
-import sys
 
 from bs4 import BeautifulSoup
 
 from utils import remove_tabs_new_lines, user_response, Weather
-
-# sys.setdefaultencoding('utf-8')
 
 
 def main():
@@ -20,10 +17,10 @@ def main():
         weather = parse_html(html)
 
         print(u"Weather in {city}: {temp}, {cond}, with {humidity}% humidity".format(
-            city=weather.city,
-            temp=weather.temp,
-            cond=weather.cond,
-            humidity=weather.humidity
+            city		= weather.city,
+            temp		= weather.temp,
+            cond		= weather.cond,
+            humidity	= weather.humidity
         ))
 
 
@@ -85,4 +82,4 @@ def humidity_from_soup(soup):
     return humidity
 
 if __name__ == '__main__':
-	main()
+    main()
